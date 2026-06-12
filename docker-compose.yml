@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  voice-dashboard:
+    build: .
+    container_name: voice-dashboard
+    restart: always
+    ports:
+      - "9000:9000"
+    volumes:
+      # Map the directory where your models are stored to the container
+      # The left side should be the absolute path to your models on the VPS host
+      # The right side is where the container expects them (as defined by MODELS_DIR)
+      - /path/to/your/vps/stt-wishper:/models
+    # If your Caddy container is on a specific network, connect this container to it
+    # networks:
+    #   - caddy_net
+
+# networks:
+#   caddy_net:
+#     external: true

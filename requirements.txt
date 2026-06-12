@@ -1,0 +1,11 @@
+numpy
+sounddevice
+soundfile
+scipy
+faster-whisper
+silero-vad
+kokoro-onnx
+fastapi
+uvicorn
+websockets
+torch
